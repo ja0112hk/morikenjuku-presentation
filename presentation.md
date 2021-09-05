@@ -29,7 +29,7 @@ title: "Webアクセシビリティについて（WAI-ARIAとJS）"
 
 ---
 
-#### 全てのユーザーが同じ体験を得られるようにすること
+#### <div style="text-align:left;">全てのユーザーが同じ体験を得られるようにすること</div>
 
 ---
 
@@ -84,9 +84,9 @@ title: "Webアクセシビリティについて（WAI-ARIAとJS）"
 
 ---
 
-#### WAI-ARIAとは
+#### <span style="color:skyblue">WAI-ARIA</span>とは
 
-<span style="color:skyblue">W</span>eb <span style="color:skyblue">A</span>ccessibility <span style="color:skyblue">I</span>nitiative (W3C の中で、Web アクセシビリティに関する仕様を検討する部会) が策定した、<span style="color:skyblue">A</span>ccessible  な <span style="color:skyblue">R</span>ich <span style="color:skyblue">I</span>nternet <span style="color:skyblue">A</span>pplications に関する仕様です。
+<div style="text-align:left;"><span style="color:skyblue">W</span>eb <span style="color:skyblue">A</span>ccessibility <span style="color:skyblue">I</span>nitiative (W3C の中で、Web アクセシビリティに関する仕様を検討する部会) が策定した、<span style="color:skyblue">A</span>ccessible  な <span style="color:skyblue">R</span>ich <span style="color:skyblue">I</span>nternet <span style="color:skyblue">A</span>pplications に関する仕様です。</div>
 
 ---
 
@@ -104,7 +104,7 @@ title: "Webアクセシビリティについて（WAI-ARIAとJS）"
 
 ---
 
-#### HTMLの要素に属性を与えることで、支援技術のユーザー向けに情報を追加したり、変更したりする手段を提供している
+#### <div style="text-align:left;">HTMLの要素に属性を与えることで、支援技術のユーザー向けに情報を追加したり、変更したりする手段を提供している</div>
 
 ---
 
@@ -118,15 +118,67 @@ title: "Webアクセシビリティについて（WAI-ARIAとJS）"
 
 ---
 
-ロール、プロパティ、ステート
+WAI-ARIAの３つの機能
+- ロール{.fragment .fade-in-then-semi-out"}
+- プロパティ{.fragment .fade-in-then-semi-out"}
+- ステート{.fragment .fade-in-then-semi-out"}
 
 ---
 
-rule
+#### ロール
+---
+> 役割{.fragment .fade-in-then-semi-out"}
+#### RPG風に表現すると…{.fragment .fade-in-then-semi-out"}
+> 「職業、種族」剣士、僧侶、魔法使い{.fragment .fade-in-then-semi-out"}
+#### 例）`<div>`に`button`ロールで支援技術がボタンと認識{.fragment .fade-in-then-semi-out"}
 
 ---
 
-attention
+#### プロパティ
+---
+> 特性、能力{.fragment .fade-in-then-semi-out"}
+#### RPG風に表現すると…{.fragment .fade-in-then-semi-out"}
+> 剣士→剣を装備できる{.fragment .fade-in-then-semi-out"}
+#### 限定されるものもある{.fragment .fade-in-then-semi-out"}
+> 魔法は魔法使いしか使えない{.fragment .fade-in-then-semi-out"}
+#### 例）`aria-label`「説明のテキスト追加」{.fragment .fade-in-then-semi-out"}
+#### 例）`aria-required`「フォームなどでしか使えない」{.fragment .fade-in-then-semi-out"}
+
+---
+
+#### ステート
+---
+> 状態{.fragment .fade-in-then-semi-out"}
+#### RPG風に表現すると…{.fragment .fade-in-then-semi-out"}
+> 健康状態、どんな装備を身に着けた、誰が仲間に{.fragment .fade-in-then-semi-out"}
+#### 例）`aria-hidden`「目に見える？見えない？」{.fragment .fade-in-then-semi-out"}
+
+---
+
+#### 注意すべきポイント
+- 暗黙のロールで目的を果たせる場合はそれを使う
+- 必要な場合以外ネイティブのセマンティクスを変更しない
+- すべてキーボードで使用できるよう
+
+
+---
+
+#### `<button> //暗黙のロール button`
+#### `<a> // 暗黙のロール link`
+
+---
+
+```
+<h1 role="button">
+```
+
+##### `<h1>にbuttonロール…見出しとしての機能を失う`
+```
+<h1><button></button></h1>
+```
+
+
+---
 
 ---
 
