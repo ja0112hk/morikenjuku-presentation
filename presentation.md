@@ -7,12 +7,12 @@ title: "Webアクセシビリティについて（WAI-ARIAとJS）"
 
 ---
 
-##   Webアクセシビリティについて
-<span style="color:skyblue">（WAI-ARIAとJS）</span>
+##   <div style="text-align:left;">Webアクセシビリティ入門</div>
+<div style="color:skyblue;text-align:left;">（WAI-ARIAとJS）</div>
 
 ---
-##### こっぺ<br>
-##### 2021-9-18
+##### <div style="text-align:left;">こっぺ</div>
+##### <div style="text-align:left;">2021-9-18</div>
 
 ---
 
@@ -70,8 +70,6 @@ title: "Webアクセシビリティについて（WAI-ARIAとJS）"
 ---
 
 ##### 問題点
-
----
 
 - ##### ブラウザがボタンと認識できない{.fragment .fade-in-then-semi-out"}
 - ##### JS、CSSでボタンに見えるものを作れてしまう{.fragment .fade-in-then-semi-out"}
@@ -156,29 +154,46 @@ WAI-ARIAの３つの機能
 ---
 
 #### 注意すべきポイント
-- 暗黙のロールで目的を果たせる場合はそれを使う
-- 必要な場合以外ネイティブのセマンティクスを変更しない
-- すべてキーボードで使用できるよう
+1. 暗黙のロールで目的を果たせる場合はそれを使う
+2. 必要な場合以外ネイティブのセマンティクスを変更しない
+3. すべてキーボードで使用できるよう
 
 
 ---
 
-#### `<button> //暗黙のロール button`
-#### `<a> // 暗黙のロール link`
+1. 暗黙のロールで目的を果たせる場合はそれを使う
+
+```
+<button>
+```
+
+#### `暗黙のロール button`{.fragment .fade-in-then-semi-out"}
+```
+<a>
+```
+
+#### `暗黙のロール link`{.fragment .fade-in-then-semi-out"}
+<br>
+
+*備わっているロールを極力使う！*{.fragment .fade-in-then-semi-out"}
 
 ---
+
+2. 必要な場合以外ネイティブのセマンティクスを変更しない
 
 ```
 <h1 role="button">
 ```
 
-##### `<h1>にbuttonロール…見出しとしての機能を失う`
+##### `<h1>にbuttonロール…見出しとしての機能を失う`{.fragment .fade-in-then-semi-out"}
 ```
 <h1><button></button></h1>
 ```
+##### 正しい使い方{.fragment .fade-in-then-semi-out"}
 
+<br>
 
----
+*本来の機能を失わず、別の機能を追加している*{.fragment .fade-in-then-semi-out"}
 
 ---
 
