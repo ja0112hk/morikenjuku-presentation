@@ -201,6 +201,108 @@ WAI-ARIAの３つの機能
 
 ---
 
-## 参考文献
+```
+<ul>
+    <li><a href="#section1">tab1</a></li>
+    <li><a href="#section2">tab2</a></li>
+    <li><a href="#section3">tab3</a></li>
+</ul>
+<section id="section1">...</section>
+<section id="section2">...</section>
+<section id="section3">...</section>
+```
+
+---
+
+```
+<ul role="tablist">
+    <li role="presentation"><a href="#section1" role="tab" aria-controls="panel1" aria-selected="true">tab1</a></li>
+    <li role="presentation"><a href="#section2" role="tab" aria-controls="panel2">tab2</a></li>
+    <li role="presentation"><a href="#section3" role="tab" aria-controls="panel3">tab3</a></li>
+</ul>
+<section id="section1" role="tabpanel1">...</section>
+<section id="section2" role="tabpanel2" aria-hidden="true">...</section>
+<section id="section3" role="tabpanel3" aria-hidden="true">...</section>
+```
+
+---
+
+<div style="color:skyblue;text-align:left;">tablist</div>
+
+<p style="text-align:left;">tabを収容するロール。</p>
+
+---
+
+<div style="color:skyblue;text-align:left;">tab</div>
+
+<p style="text-align:left;">ロール。tablistを構成する１つのタブ</p>
+
+---
+
+<div style="color:skyblue;text-align:left;">tabpanel</div>
+
+<p style="text-align:left;">ロール。tabで定義された１つのタブパネル。</p>
+
+---
+
+<div style="color:skyblue;text-align:left;">aria-selected</div>
+
+<p style="text-align:left;">ステート。現在選択されているアクティブのものを示す。</p>
+<div style="color:skyblue;text-align:left;">aria-hidden</div>
+
+<p style="text-align:left;">ステート。trueで非表示に。</p>
+<div style="color:skyblue;text-align:left;">aria-controls</div>
+
+<p style="text-align:left;">ステート。tabpanelとの間にリレーションシップを作る。</p>
+
+
+---
+
+<div style="color:skyblue;text-align:left;">presentation</div>
+
+<p style="text-align:left;">要素の元々の意味を取り除く特殊なロール。liのrole="listitem"を打ち消している。</p>
+
+
+---
+
+<img src="tab.png">
+
+1. tabキーでtab1にフォーカス{.fragment .fade-in-then-semi-out"}
+2. 左右矢印キーでtab2、tab3切り替え{.fragment .fade-in-then-semi-out"}
+3. tabキーで見出しにフォーカス{.fragment .fade-in-then-semi-out"}
+4. shift + tab でtabキーに戻る{.fragment .fade-in-then-semi-out"}
+
+---
+
+tabindex
+- tabindex="0"  出現順にフォーカスを受け取る
+- tabindex="1"..."3" 1,2,3の順番にフォーカスを受け取る
+- tabinde="マイナスの値" フォーカスを受け取らない
+
+---
+
+```
+<ul>
+    <li><a>...</a></li>
+    <li><a tabindex="-1">...</a></li>
+    <li><a tabindex="-1">...</a></li>
+</ul>
+<section>
+    <見出し tabindex="0"></>
+</section>
+<section>
+    <見出し tabindex="0"></>
+</section>
+<section>
+    <見出し tabindex="0"></>
+</section>
+
+---
+
+#### 感想
+
+---
+
+#### 参考文献
 
 ---
