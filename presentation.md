@@ -106,7 +106,7 @@ title: "Webアクセシビリティについて（WAI-ARIAとJS）"
 
 ---
 
-#### 先程のボタンに実装してみる余談ボタンの属性
+#### 先程のボタンに実装してみる
 
 ---
 
@@ -125,20 +125,20 @@ WAI-ARIAの３つの機能
 
 #### ロール
 ---
-> 役割{.fragment .fade-in-then-semi-out"}
+*<span style="color:orange;">役割*{.fragment .fade-in-then-semi-out"}
 #### RPG風に表現すると…{.fragment .fade-in-then-semi-out"}
-> 「職業、種族」剣士、僧侶、魔法使い{.fragment .fade-in-then-semi-out"}
+*<span style="color:orange;">「職業、種族」剣士、僧侶、魔法使い*{.fragment .fade-in-then-semi-out"}
 #### 例）`<div>`に`button`ロールで支援技術がボタンと認識{.fragment .fade-in-then-semi-out"}
 
 ---
 
 #### プロパティ
 ---
-> 特性、能力{.fragment .fade-in-then-semi-out"}
+*<span style="color:orange;">特性、能力*{.fragment .fade-in-then-semi-out"}
 #### RPG風に表現すると…{.fragment .fade-in-then-semi-out"}
-> 剣士→剣を装備できる{.fragment .fade-in-then-semi-out"}
+*<span style="color:orange;">剣士→剣を装備できる*{.fragment .fade-in-then-semi-out"}
 #### 限定されるものもある{.fragment .fade-in-then-semi-out"}
-> 魔法は魔法使いしか使えない{.fragment .fade-in-then-semi-out"}
+*<span style="color:orange;">魔法は魔法使いしか使えない*{.fragment .fade-in-then-semi-out"}
 #### 例）`aria-label`「説明のテキスト追加」{.fragment .fade-in-then-semi-out"}
 #### 例）`aria-required`「フォームなどでしか使えない」{.fragment .fade-in-then-semi-out"}
 
@@ -146,9 +146,9 @@ WAI-ARIAの３つの機能
 
 #### ステート
 ---
-> 状態{.fragment .fade-in-then-semi-out"}
+*<span style="color:orange;">状態*{.fragment .fade-in-then-semi-out"}
 #### RPG風に表現すると…{.fragment .fade-in-then-semi-out"}
-> 健康状態、どんな装備を身に着けた、誰が仲間に{.fragment .fade-in-then-semi-out"}
+*<span style="color:orange;">健康状態、どんな装備を身に着けた、誰が仲間に*{.fragment .fade-in-then-semi-out"}
 #### 例）`aria-hidden`「目に見える？見えない？」{.fragment .fade-in-then-semi-out"}
 
 ---
@@ -175,7 +175,7 @@ WAI-ARIAの３つの機能
 #### `暗黙のロール link`{.fragment .fade-in-then-semi-out"}
 <br>
 
-*備わっているロールを極力使う！*{.fragment .fade-in-then-semi-out"}
+*<span style="color:orange;">備わっているロールを極力使う！*{.fragment .fade-in-then-semi-out"}
 
 ---
 
@@ -193,13 +193,15 @@ WAI-ARIAの３つの機能
 
 <br>
 
-*本来の機能を失わず、別の機能を追加している*{.fragment .fade-in-then-semi-out"}
+*<span style="color:orange;">本来の機能を失わず、別の機能を追加している*{.fragment .fade-in-then-semi-out"}
 
 ---
 
 ## WAI-ARIAとJS
 
 ---
+
+一般的なタブUI
 
 ```
 <ul>
@@ -213,6 +215,8 @@ WAI-ARIAの３つの機能
 ```
 
 ---
+
+ariaを実装した例
 
 ```
 <ul role="tablist">
@@ -231,13 +235,9 @@ WAI-ARIAの３つの機能
 
 <p style="text-align:left;">tabを収容するロール。</p>
 
----
-
 <div style="color:skyblue;text-align:left;">tab</div>
 
 <p style="text-align:left;">ロール。tablistを構成する１つのタブ</p>
-
----
 
 <div style="color:skyblue;text-align:left;">tabpanel</div>
 
@@ -265,7 +265,7 @@ WAI-ARIAの３つの機能
 
 ---
 
-<img src="tab.png">
+<img src="tab.png" height="300px">
 
 1. tabキーでtab1にフォーカス{.fragment .fade-in-then-semi-out"}
 2. 左右矢印キーでtab2、tab3切り替え{.fragment .fade-in-then-semi-out"}
@@ -274,12 +274,14 @@ WAI-ARIAの３つの機能
 
 ---
 
-tabindex
-- tabindex="0"  出現順にフォーカスを受け取る
-- tabindex="1"..."3" 1,2,3の順番にフォーカスを受け取る
-- tabinde="マイナスの値" フォーカスを受け取らない
+<span style="color:skyblue;">tabindex</span>
+- tabindex="0"<br>出現順にフォーカスを受け取る
+- tabindex="1"..."n"<br>1...nの順番にフォーカスを受け取る
+- tabindex="マイナスの値"<br>フォーカスを受け取らない
 
 ---
+
+tabindex実装後
 
 ```
 <ul>
@@ -297,12 +299,29 @@ tabindex
     <見出し tabindex="0"></>
 </section>
 
+```
+
+---
+
+#### これで、キーボードで操作できてスクリーンリーダーによってtabと認識され、無事に読み上げられる
+*<span style="color:orange;">完成！！！*{.fragment .fade-in-then-semi-out"}
+
 ---
 
 #### 感想
 
+- ariaを使いながら慣れていこう
+- ariaだけじゃなく、アクセシブルなマークアップ大事
+
 ---
 
 #### 参考文献
+
+- [wai-aria MDN](https://developer.mozilla.org/ja/docs/Learn/Accessibility/WAI-ARIA_basics)
+- [wai-aria 注意点 zenn](https://zenn.dev/yusukehirao/articles/e3512a58df58fd)
+
+---
+
+おわり
 
 ---
