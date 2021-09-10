@@ -39,7 +39,7 @@ title: "Webアクセシビリティについて（WAI-ARIAとJS）"
 
 ---
 
-どちらが押せそう？
+どちらがボタンとして優れている…？
 
 ---
 
@@ -69,7 +69,12 @@ title: "Webアクセシビリティについて（WAI-ARIAとJS）"
 
 ---
 
-##### 問題点
+#### つまり、Webアクセシビリティとは
+*<span style="color:orange;">支援技術が読み取れるようにセマンティクス（タグを本来の意味で使用）なマークアップをすること*{.fragment .fade-in-then-semi-out"}
+
+---
+
+##### `<div>`ボタンの問題点
 
 - ##### ブラウザがボタンと認識できない{.fragment .fade-in-then-semi-out"}
 - ##### JS、CSSでボタンに見えるものを作れてしまう{.fragment .fade-in-then-semi-out"}
@@ -99,6 +104,8 @@ title: "Webアクセシビリティについて（WAI-ARIAとJS）"
 <div>...
 <div>...
 ```
+
+<span style="font-size:15px;">"ヘイドン・ピカリング(2015) コーティングWebアクセシビリティ"</span>
 
 ---
 
@@ -214,6 +221,8 @@ WAI-ARIAの３つの機能
 <section id="section3">...</section>
 ```
 
+<span style="font-size:15px;">"ヘイドン・ピカリング(2015) コーティングWebアクセシビリティ"</span>
+
 ---
 
 ariaを実装した例
@@ -228,6 +237,8 @@ ariaを実装した例
 <section id="section2" role="tabpanel2" aria-hidden="true">...</section>
 <section id="section3" role="tabpanel3" aria-hidden="true">...</section>
 ```
+
+<span style="font-size:15px;">"ヘイドン・ピカリング(2015) コーティングWebアクセシビリティ"</span>
 
 ---
 
@@ -319,6 +330,7 @@ tabindex実装後
 
 - [wai-aria MDN](https://developer.mozilla.org/ja/docs/Learn/Accessibility/WAI-ARIA_basics)
 - [wai-aria 注意点 zenn](https://zenn.dev/yusukehirao/articles/e3512a58df58fd)
+- <span style="font-size:25px;">"ヘイドン・ピカリング(2015) コーティングWebアクセシビリティ"</span>
 
 ---
 
