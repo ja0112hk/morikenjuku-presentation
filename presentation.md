@@ -77,7 +77,7 @@ title: "Webアクセシビリティについて（WAI-ARIAとJS）"
 ##### `<div>`ボタンの問題点
 
 - ##### ブラウザがボタンと認識できない{.fragment .fade-in-then-semi-out"}
-- ##### JS、CSSでボタンに見えるものを作れてしまう{.fragment .fade-in-then-semi-out"}
+- ##### CSSでボタンに見えるものを作れてしまう{.fragment .fade-in-then-semi-out"}
 - ##### 結果、全てのユーザーが平等に扱えない…{.fragment .fade-in-then-semi-out"}
 
 
@@ -225,13 +225,23 @@ WAI-ARIAの３つの機能
 
 ---
 
+<img src="tab.png" height="300px">
+
+---
+
 ariaを実装した例
 
 ```
 <ul role="tablist">
-    <li role="presentation"><a href="#section1" role="tab" aria-controls="panel1" aria-selected="true">tab1</a></li>
-    <li role="presentation"><a href="#section2" role="tab" aria-controls="panel2">tab2</a></li>
-    <li role="presentation"><a href="#section3" role="tab" aria-controls="panel3">tab3</a></li>
+    <li role="presentation">
+        <a href="#section1" role="tab" aria-controls="panel1" aria-selected="true">tab1</a>
+    </li>
+    <li role="presentation">
+        <a href="#section2" role="tab" aria-controls="panel2">tab2</a>
+    </li>
+    <li role="presentation">
+        <a href="#section3" role="tab" aria-controls="panel3">tab3</a>
+    </li>
 </ul>
 <section id="section1" role="tabpanel1">...</section>
 <section id="section2" role="tabpanel2" aria-hidden="true">...</section>
@@ -256,6 +266,13 @@ ariaを実装した例
 
 ---
 
+<div style="color:skyblue;text-align:left;">presentation</div>
+
+<p style="text-align:left;">要素の元々の意味を取り除く特殊なロール。liのrole="listitem"を打ち消している。</p>
+
+
+---
+
 <div style="color:skyblue;text-align:left;">aria-selected</div>
 
 <p style="text-align:left;">ステート。現在選択されているアクティブのものを示す。</p>
@@ -265,14 +282,6 @@ ariaを実装した例
 <div style="color:skyblue;text-align:left;">aria-controls</div>
 
 <p style="text-align:left;">ステート。tabpanelとの間にリレーションシップを作る。</p>
-
-
----
-
-<div style="color:skyblue;text-align:left;">presentation</div>
-
-<p style="text-align:left;">要素の元々の意味を取り除く特殊なロール。liのrole="listitem"を打ち消している。</p>
-
 
 ---
 
