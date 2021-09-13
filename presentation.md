@@ -35,7 +35,7 @@ title: "Webアクセシビリティについて（WAI-ARIAとJS）"
 
 <div style="width: 200px;color:black;background:white;border-radius:30px;margin:0 auto;box-shadow:0 5px 0 gray;" >見る</div>
 
-<button>見る</button>
+<button type="button">見る</button>
 
 ---
 
@@ -60,7 +60,7 @@ title: "Webアクセシビリティについて（WAI-ARIAとJS）"
 
 ##### ２つ目のボタン
 ```
-<button>見る</button>
+<button type="button">見る</button>
 ```
 <br>
 
