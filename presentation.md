@@ -83,10 +83,6 @@ title: "Webアクセシビリティについて（WAI-ARIAとJS）"
 
 ---
 
-<img src="cham.PNG" height="500px">
-
----
-
 ## WAI-ARIA
 
 ---
@@ -109,7 +105,7 @@ title: "Webアクセシビリティについて（WAI-ARIAとJS）"
 <div>...
 ```
 
-<span style="font-size:15px;">"ヘイドン・ピカリング(2015) コーティングWebアクセシビリティ"</span>
+<span style="font-size:15px;">"ヘイドン・ピカリング(2015) コーディングWebアクセシビリティ"</span>
 
 ---
 
@@ -208,6 +204,10 @@ WAI-ARIAの３つの機能
 
 ---
 
+<img src="cham.PNG" height="500px">
+
+---
+
 ## WAI-ARIAとJS
 
 ---
@@ -225,7 +225,7 @@ WAI-ARIAの３つの機能
 <section id="section3">...</section>
 ```
 
-<span style="font-size:15px;">"ヘイドン・ピカリング(2015) コーティングWebアクセシビリティ"</span>
+<span style="font-size:15px;">"ヘイドン・ピカリング(2015) コーディングWebアクセシビリティ"</span>
 
 ---
 
@@ -252,7 +252,7 @@ ariaを実装した例
 <section id="section3" role="tabpanel3" aria-hidden="true">...</section>
 ```
 
-<span style="font-size:15px;">"ヘイドン・ピカリング(2015) コーティングWebアクセシビリティ"</span>
+<span style="font-size:15px;">"ヘイドン・ピカリング(2015) コーディングWebアクセシビリティ"</span>
 
 ---
 
@@ -343,7 +343,7 @@ tabindex実装後
 
 - [wai-aria MDN](https://developer.mozilla.org/ja/docs/Learn/Accessibility/WAI-ARIA_basics)
 - [wai-aria 注意点 zenn](https://zenn.dev/yusukehirao/articles/e3512a58df58fd)
-- <span style="font-size:25px;">"ヘイドン・ピカリング(2015) コーティングWebアクセシビリティ"</span>
+- <span style="font-size:25px;">"ヘイドン・ピカリング(2015) コーディングWebアクセシビリティ"</span>
 
 ---
 
